@@ -8,8 +8,14 @@
 
 }
 
+:root{
+    --cor01:#24253c;
+    --cor02:#1e2131;
+    --cor03:#f25656;
+}
+
 body{
-    background-image: url(imagens/plano\ de\ fundo-topo\ \(2\).png);
+    background-color: #1e2131;
     height: 100vh;
    
 }
@@ -29,13 +35,24 @@ img{
     max-height:150px;
     width: auto;
     height: auto;
+    margin-top: 15px;
+}
+
+header{
+    background: rgba(255, 255, 255, 0.164);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.11);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 80px;
 }
 
 
 header > .interface{
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
     /* ISSO É IMPORTANTE GI */
    }
 
@@ -52,7 +69,8 @@ header a:hover{
 }
 
 header nav a:hover{
-    color: #CFAB4B;
+    color: #f25656;
+    
     transform: scale(1.05);  /* para dar aquele mini zoon */
     transition: 0.2s;
     
@@ -69,51 +87,95 @@ header nav ul li{
     font-weight: bold
 }
 
+header .linkedin button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: #f25656;
+    color:white;
+    cursor: pointer;
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+
+header .linkedin button:hover{
+    box-shadow: 0px 0px 8px #f2565691;
+}
+
 /* TOPO DO SITE */
 
 section.topo-do-site{
     padding: 40px 4%;
+    background-color: #1e2131;
+    
 
 }
 
 section.topo-do-site .flex{
     align-items: center;
-    justify-content: center;
-    gap: 90px; /* respiro entre os espaços */
+    justify-content: space-between;
+    gap: 100px; /* respiro entre os espaços */
     
     }
 
 .texto-topo-do-site{
         color: white;
         padding: 40px ;
+        margin-top: 90px;
+        margin-left:50px ;
+        
     }
 
 h1{
-    color: white;
+    color: #f25656;
+    text-align: left;
+    font-family: 'Quando', sans-serif;
     font-size: 55px;
-    font-weight: 300;
+    font-weight: 400;
     border-right: 4px solid;
     width: 14ch;
-    white-space: nowrap;
+    white-space: nowrap;  /* para não quebrar a linha */
     overflow: hidden;
-    animation: typing 2s steps(10), blinking 0.5s infinite step-end alternate;
+    animation: typing 500ms steps(20) infinite normal, blinking 2s steps(20) 1s normal both;
 
 }
+h2{
+    font-size: 30px;
+}
+
 @keyframes typing{
     from{
-        width: 0;
+        border-right-color:#f25656;
+    }
+    to{
+        border-right-color:transparent;
     }
 }
 @keyframes blinking{
-    50%{
-        border-color: transparent;
+    from{
+        width: 0;
+    }
+    to{
+        width: 8em;
     }
 }
 
-img{
-    max-width:200px;
-    max-height:150px;
-    width: auto;
-    height: auto;
+section .linkedin a button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f25656;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
 }
 
+.linkedin a button:hover{
+    box-shadow: 0px 0px 8px #f2565691;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
