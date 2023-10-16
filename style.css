@@ -12,6 +12,8 @@
     --cor01:#24253c;
     --cor02:#1e2131;
     --cor03:#f25656;
+    --font01:'Quando', sans-serif;
+    --font02:'Sarala', sans-serif;
 }
 
 body{
@@ -27,6 +29,17 @@ body{
 .interface{
     max-width: 1280px;
     margin: auto;
+}
+
+h2#titulo{
+    font-family: var(--font01);
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+h2#titulo span{
+    color: var(--cor03);
+    font-family: var(--font01);
 }
 /* ESTILO CABEÇALHO */
 
@@ -53,7 +66,7 @@ header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-around; 
-    /* ISSO É IMPORTANTE GI */
+    
    }
 
    header a{
@@ -178,4 +191,71 @@ section .linkedin a button{
     box-shadow: 0px 0px 8px #f2565691;
     transform: scale(1.05);
     transition: 0.2s;
+}
+
+ img#imagem-topo-do-site{
+    max-width:450px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+.topo-do-site .imagem-topo-do-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar{ /* ISSO VAI TRAZER A ANIMAÇÃO DA IMAGEM */
+    0%{
+        top:0;
+    } 
+    100%{
+        top: 30px;
+    }
+}
+
+/* SOBRE MIM */
+
+section.sobre-mim{
+    background-color: #24253c;
+    padding: 40px 4%;
+    height: 615px;
+    
+}
+section.sobre-mim .flex{
+    align-items: center;
+    gap: 60px ;
+    justify-content: space-around;
+ }
+
+section.sobre-mim .texto-sobre{
+    color: white;
+    padding: 20px;
+ }
+
+ img#Giselinha-real{
+    max-width:400px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 50px;
+    align-items: center;
+
+ }
+
+.texto-sobre h2#titulo{
+    text-align:left;
+    line-height: 40px;
+    margin-bottom: 40px;
+    gap: 12px;
+}
+.texto-sobre h2 span{
+    display: block;  
+}
+.texto-sobre p{
+    margin: 25px 0;
+    text-align: justify;
+    font-size: 20px;
+    width: 500px;
 }
